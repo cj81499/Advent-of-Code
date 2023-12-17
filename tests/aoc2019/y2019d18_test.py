@@ -98,7 +98,7 @@ EXAMPLE_INPUT_B4 = """
         (EXAMPLE_INPUT_A4, 81),
     ],
 )
-def test_a(input, expected):
+def test_a(input: str, expected: int) -> None:
     assert d.parta(input) == expected
 
 
@@ -111,5 +111,5 @@ def test_a(input, expected):
         (EXAMPLE_INPUT_B4, 72),
     ],
 )
-def test_b(input, expected):
+def test_b(input: str, expected: int) -> None:
     assert d.partb(input) == expected
