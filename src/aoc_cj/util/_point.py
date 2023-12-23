@@ -2,7 +2,7 @@ import dataclasses
 import re
 from collections.abc import Generator
 
-from typing_extensions import Self
+from typing_extensions import Self, override
 
 __all__ = ("Point3D",)
 
@@ -19,6 +19,7 @@ class Point3D:
         cls = self.__class__
         return cls(self.x + other.x, self.y + other.y, self.z + other.z)
 
+    @override
     def __str__(self) -> str:
         return str((self.x, self.y, self.z))
 

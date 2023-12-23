@@ -6,7 +6,7 @@ import itertools
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
 
-from typing_extensions import Self
+from typing_extensions import Self, override
 
 from aoc_cj import util
 
@@ -18,6 +18,7 @@ class Brick:
     c1: util.Point3D
     c2: util.Point3D
 
+    @override
     def __str__(self) -> str:
         return f"({self.c1}, {self.c2})"
 
